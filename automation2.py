@@ -2,7 +2,7 @@ import getpass
 import sys
 import telnetlib
 
-HOST = "192.168.122.200"
+HOST = "192.168.122.100"
 user = raw_input("Enter your Telnet Username: ")
 password = getpass.getpass()
 
@@ -15,16 +15,19 @@ if password:
     tn.write(password + "\n")
 
 tn.write("enable\n")
-tn.write("admin\n")
 tn.write("conf t\n")
-# tn.write("hostname hasan \n")
-tn.write("int loop 0\n")
-tn.write("ip address 10.1.1.1 255.255.255.0\n")
+tn.write("vlan 2\n")
+tn.write("name  Automation-Vlan2 \n")
+tn.write("vlan 3\n")
+tn.write("name automation-Vlan3 \n")
+tn.write("vlan 4\n")
+tn.write("name  Automation-Vlan4 \n")
+tn.write("vlan 5\n")
+tn.write("name automation-Vlan5 \n")
 tn.write("int loop 1\n")
-tn.write("ip address 20.1.1.1 255.255.255.0\n")
-tn.write("router ospf 1\n")
-tn.write("network 0.0.0.0 255.255.255.255 area 0 \n")
+tn.write("ip address 10.11.11.1 255.255.255.0 \n")
 tn.write("end\n")
 tn.write("wr\n")
 tn.write("exit\n")
 print tn.read_all()
+a
