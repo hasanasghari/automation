@@ -1,13 +1,13 @@
 import socket
 import os
-cls=os.system("clear") #for windows put "cls"
+cls=os.system("clear")
 def portnocking():
     print()
     ip=str(input("Please Input IP Addres : "))
     if ip == "q" or ip == "Q":
           raise SystemExit()
     port=int(input("Plese Input UDP Port Number: "))
-    Message = "Hello, Server"
+    Message =input("Please Input Message default = None :")
     call=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     call.sendto(Message.encode('utf-8'), (ip, port))
     print("message sent")
