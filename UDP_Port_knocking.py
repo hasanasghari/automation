@@ -1,7 +1,7 @@
 import socket
 import os
-cls=os.system("clear")
-def portnocking():
+os.system('cls' if os.name == 'nt' else 'clear')
+def Port_knocking():
     print()
     ip=str(input("Please Input IP Addres : "))
     if ip == "q" or ip == "Q":
@@ -22,7 +22,7 @@ def menu():
     print()
     a=input("   > ")
     while a == "1":
-        portnocking()
+        Port_knocking()
         
     
 menu()
