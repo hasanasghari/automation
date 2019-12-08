@@ -3,7 +3,7 @@ import os
 os.system('cls' if os.name == 'nt' else 'clear')
 def Port_knocking():
     print()
-    ip=str(input("Please Input IP Addres : "))
+    ip=str(input("Please Input IP Address : "))
     if ip == "q" or ip == "Q":
           raise SystemExit()
     port=int(input("Plese Input UDP Port Number: "))
