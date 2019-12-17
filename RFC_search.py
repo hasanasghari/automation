@@ -9,3 +9,5 @@ url = template.format(rfc_number)
 rfc_raw = urllib.request.urlopen(url).read()
 rfc = rfc_raw.decode()
 print(rfc)
+
+#python3.8 RFC_search.py 1918 | more
